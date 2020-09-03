@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(rgba(0,0,30,0.7), rgba(25,0,25,.9)), url("/images/td4.png");
+    background-size:auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: goldenrod;
+}
+
+#task-list-container ul{
+    padding : 0px;
+    border : 1px solid white;
+}
+
+#task-list-container li:hover {
+    background-color: lightslategray;
+    color: darkblue;
+    font-weight: bolder;
+    transform: scale(1);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.task{
+    padding : 3px 2px;
+    border : 1px solid white;
+    /* background-color: #6f92f9; */
+    color: white;
+    display:flex;
+	flex-direction: row;
+}
+
+.task .details{
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin: 20px; */
+    width: 80%;
+}
+
+.task .delete-button {
+    width: 20%;
+    padding: 3px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+    text-align: right;
+}
+
+.task .delete-button a{
+    color: red;
+    background-color: white;
+}
+
+.task .delete-button a:hover {
+    color: black;
+    transform: scale(1.5);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+h1 i{
+    margin-right: 10px;
+}
+
+#add-button{
+    font-size: 60px;
+    padding: 15px;
+    height: max-content;
+}
+
+/* #add-task{
+    height: 10px;
+    size: 40px;
+    font-size: 50px;
+    text-align: center;
+} */
+
+/* #due-date{
+    size: 40px;
+    font-size: xx-large;
+    display: block;
+}
+
+#category{
+    size: 40px;
+    font-size: xx-large;
+    display: block;
+} */
+
+form{
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
+
+/* .horizontal-list{
+    display:flex;
+	flex-direction: row;
+} */
+
+li{
+    list-style:none;
+}

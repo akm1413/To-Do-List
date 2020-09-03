@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <h1 id="page-heading"><i class="fa  fa-list-ol"></i><u style="margin-top: 2px;">To-Do List</u></h1>
+        <div id="task-list-container">
+            <ul>
+                <% for(let i of task_list) { %>
+                    <li class="task">
+
+                        <div class="details">
+                            <p> <%= i.name %> </p>
+                            <p> <%= i.time %> </p>
+                            <p> <%= i.category %> </p>
+                        </div>
+                        <div class="delete-button">
+                            <a href="/delete-task/?id=<%=i._id%>">
+                                <i class="fa fa-trash" ></i>
+                            </a>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+            <p>Total Tasks : <%= task_list.length %></p>
+        </div>  
+
+        <form action = "create-task"  action="/create-task" method = "POST">
+            <ul id="add-task">
+                <li><input type = "text" name="name" placeholder="Enter task" required> </li>  
+            </ul>
+            <ul class="horizontal-list">
+                <li id="due-date">
+                    <input type = "date" name="time" placeholder="Enter deadline" required>
+                </li>
+                <li id="category">
+                    <select name="category" aria-placeholder="category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="college">College</option>
+                        <option value="extra">Extra</option>
+                        <option value="game">Game</option>
+                    </select>
+                </li>
+            </ul>
+
+            <div id="add-button">
+                <button type="submit"> <i class="fa  fa-plus"></i> Add Task</button> 
+            </div>
+        </form>
+        
+        <script type="text/javascript" src="/js/home.js"> </script>
+        
+    </body>
+</html>
